@@ -55,7 +55,7 @@ export const Header = () => {
     dispatch(removeAllMessages());
     dispatch(toggleBotTyping(false));
     dispatch(toggleUserTyping(true));
-    dispatch(setUserTypingPlaceholder("Type you message..."));
+    dispatch(setUserTypingPlaceholder("Type your message..."));
     setShowDropdown(!showDropdown);
   };
   const handleRestartButton = () => {

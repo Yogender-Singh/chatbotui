@@ -22,7 +22,7 @@ const initialState = {
   messages: [],
   botTyping: false,
   userTyping: true,
-  userTypingPlaceholder: "Type your message here...",
+  userTypingPlaceholder: "Type yours message here...",
   userGreeted: false,
 };
 export const messagesSlice = createSlice({
@@ -67,7 +67,7 @@ export const messagesSlice = createSlice({
       state.botTyping = action.payload;
       state.userTypingPlaceholder = action.payload
         ? "Please wait for bot response..."
-        : "Type your message here...";
+        : "Type yours message here...";
     },
     setUserTypingPlaceholder: (state, action) => {
       state.userTypingPlaceholder = action.payload;
@@ -80,7 +80,7 @@ export const messagesSlice = createSlice({
     builder.addCase(fetchBotResponse.fulfilled, (state, action) => {
       state.botTyping = false;
       state.userTyping = true;
-      state.userTypingPlaceholder = "Type your message here...";
+      state.userTypingPlaceholder = "Type yours message here...";
       const messages = action.payload;
       console.log("message", messages);
       if (messages.length > 0) {
@@ -122,7 +122,7 @@ export const messagesSlice = createSlice({
         }
       } else {
         state.messages.push({
-          text: "got problem",
+          text: "Bot Spleeping...",
           sender: "BOT",
           type: "text",
           ts: new Date(),

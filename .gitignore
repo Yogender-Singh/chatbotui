@@ -4,7 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.chatbot_audio_wav/*
+.chatbot_audio_webm/*
+*.webm
+*.wav
+*.raw
 # testing
 /coverage
 
